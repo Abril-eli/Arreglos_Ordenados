@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Arreglos {
     Scanner sc = new Scanner(System.in);
+
     public class Arreglo {
 
         String[] A;
@@ -14,20 +15,42 @@ public class Arreglos {
             n = -1;
         }
 
-        public int Buscar(String v) {
+        public int BuscarLineal(String v) {
             for (int i = 0; i <= n; i++) {
                 if (A[i].equalsIgnoreCase(v)) {
                     return i;
                 }
-                if (A[i].compareToIgnoreCase(v)>0){
+                if (A[i].compareToIgnoreCase(v) > 0) {
                     return -1;
                 }
             }
             return -1;
         }
 
+        public int BuscarBinario(String v) {
+            int inicio = 0;
+            int fin = n;
+
+            while (inicio <= fin) {
+                int p = (inicio + fin) / 2;
+
+                if (A[p].equalsIgnoreCase(v)) {
+                    return p;
+                }
+
+                if (v.compareToIgnoreCase(A[p]) > 0) {
+                    inicio = p + 1;
+                } else {
+                    fin = p - 1;
+                }
+            }
+
+            return -1;
+        }
+
+
         public int Eliminar(String v) {
-            int R = Buscar(v);
+            int R = BuscarBinario(v);
 
             if (R == -1) {
                 System.out.println("No existe el valor");
