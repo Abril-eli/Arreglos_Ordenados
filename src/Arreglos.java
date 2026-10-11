@@ -71,7 +71,7 @@ public class Arreglos {
         public int Modificar(String v) {
             int R = Eliminar(v);
             if (R != -1) {
-                System.out.println("INGRESE UN VALOR");
+                System.out.println("Ingrese un valor ");
                 String temp = sc.nextLine();
                 insertar(temp);
             }
