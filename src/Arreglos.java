@@ -17,8 +17,10 @@ public class Arreglos {
                 if (A[i].equalsIgnoreCase(v)) {
                     return i;
                 }
+                if (A[i].compareToIgnoreCase(v)>0){
+                    return -1;
+                }
             }
-
             return -1;
         }
 
