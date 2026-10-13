@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Arreglos {
@@ -21,11 +20,11 @@ public class Arreglos {
             for (int i = 0; i <= n; i++) {
                 ciclos ++;
                 if (A[i].equalsIgnoreCase(v)) {
-                    System.out.println(" palabra encontrada en la localidad " + (i + 1) + "en " + ciclos  + " ciclos");
+                    System.out.println(" palabra encontrada en la localidad " + i + " en " + ciclos  + " ciclos");
                     return i;
                 }
                 if (A[i].compareToIgnoreCase(v) > 0) {
-                    System.out.println(" no existe la palabra en el arreglo " + "se buco por " + ciclos  + " ciclos");
+                    System.out.println(" no existe la palabra en el arreglo " + " se buco por " + ciclos  + " ciclos");
                     return -1;
                 }
             }
@@ -43,7 +42,7 @@ public class Arreglos {
                 int p = (inicio + fin) / 2;
 
                 if (A[p].equalsIgnoreCase(v)) {
-                    System.out.println(" palabra encontrada en la localidad " + (p + 1) + "en " + ciclos  + " ciclos");
+                    System.out.println(" palabra encontrada en la localidad " + p + " en " + ciclos  + " ciclos");
                     return p;
                 }
 
@@ -70,7 +69,7 @@ public class Arreglos {
                 A[i] = A[i + 1];
             }
             n = n - 1;
-            System.out.println("Elemento eliminado de la localidad: " + (R + 1));
+            System.out.println("Elemento eliminado de la localidad: " + (R));
             return R;
         }
 
@@ -111,7 +110,7 @@ public class Arreglos {
             }
             else {
                 for (int i = 0; i <= n; i++) {
-                    System.out.println((i + 1) +" "+ A[i]);
+                    System.out.println((i) +" "+ A[i]);
                 }
             }
         }
