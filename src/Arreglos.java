@@ -72,6 +72,7 @@ public class Arreglos {
 
         public void inicializar() {
             n = -1;
+            System.out.println("arreglo inicializado");
         }
 
         public int Modificar(String v) {
@@ -106,7 +107,7 @@ public class Arreglos {
             }
             else {
                 for (int i = 0; i <= n; i++) {
-                    System.out.println(A[i]);
+                    System.out.println(i +" "+ A[i]);
                 }
             }
         }
