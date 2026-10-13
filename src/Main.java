@@ -83,7 +83,7 @@ public static void main(String[] args) {
                 System.out.println("Estructura de Datos");
                 System.out.println("---Integrantes---");
                 System.out.println(" Sebastian Chavarria Gomez" +  " Mat: 24170144");
-                System.out.println(" Saul Abimael Ochoa Gonzalez"+ " Mat: ");
+                System.out.println(" Saul Abimael Ochoa Gonzalez"+ " Mat: 25420046");
                 System.out.println(" Abril Elizabeth Guillen Vargas"+ "Mat: ");
                 System.out.println("============================");
                 break;
