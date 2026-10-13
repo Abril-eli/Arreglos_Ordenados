@@ -1,7 +1,7 @@
 public static void main(String[] args) {
 
     Scanner sc = new Scanner(System.in);
-    int opc = sc.nextInt();
+
     boolean cont = true;
     Arreglos arreglo = new Arreglos(20);
 
@@ -15,6 +15,8 @@ public static void main(String[] args) {
         System.out.println("6. Modificar Arreglo");
         System.out.println("7. Creditos");
         System.out.println("0. Salir");
+        int opc = sc.nextInt();
+        sc.nextLine();
 
         switch (opc) {
             case 1:
@@ -35,10 +37,50 @@ public static void main(String[] args) {
                     case 1:
                         System.out.println(" ---busqueda lineal---");
                         arreglo.BuscarLineal(palabra);
-
-
+                        break;
+                    case 2:
+                        System.out.println(" ---busqueda binaria---");
+                        arreglo.BuscarBinario(palabra);
+                        break;
+                    default:
+                        System.out.println("selecciona una opcion valida");
                 }
+                break;
+            case 4:
+                System.out.println(" ---Insertar---");
+                System.out.println(" ingresa la palabra a Insertar");
+                String palabraInsertar = sc.nextLine();
+                arreglo.insertar(palabraInsertar);
+                break;
+            case 5:
+                System.out.println(" ---Eliminar---");
+                System.out.println(" ingresa la palabra a Eliminar");
+                String palabraEliminar = sc.nextLine();
+                arreglo.Eliminar(palabraEliminar);
+                break;
+            case 6:
+                System.out.println(" ---Modificar---");
+                System.out.println(" ingresa la palabra a Modificar");
+                String palabraModificar = sc.nextLine();
+                arreglo.Modificar(palabraModificar);
+                break;
+            case 7:
+                System.out.println(" ---Creditos---");
+                System.out.println("---Materia---");
+                System.out.println("Estructura de Datos");
+                System.out.println("---Integrantes---");
+                System.out.println(" Sebastian Chavarria Gomez" +  " Mat: 24170144");
+                System.out.println(" Saul Abimael Ochoa Gonzalez"+ " Mat: ");
+                System.out.println(" Abril Elizabeth Guillen Vargas"+ "Mat: ");
+                break;
 
+            case 0:
+                cont = false;
+                System.out.println(" saliendo");
+                break;
+            default:
+                System.out.println("selecciona una opcion valida");
+                break;
         }
     }
 }

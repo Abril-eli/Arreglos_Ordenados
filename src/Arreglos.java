@@ -66,7 +66,7 @@ public class Arreglos {
                 A[i] = A[i + 1];
             }
             n = n - 1;
-
+            System.out.println("Elemento eliminado de la localidad: " + R);
             return R;
         }
 
