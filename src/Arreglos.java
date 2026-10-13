@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Arreglos {
@@ -76,6 +77,22 @@ public class Arreglos {
                 insertar(temp);
             }
             return R;
+        }
+
+        public void insertar (String v) {
+            if (n == max-1) {
+                System.out.println("Arreglo lleno");
+            }
+            else {
+                int i = n;
+                while (i >= 0 && v.compareToIgnoreCase(A[i]) < 0) {
+                    A[i + 1] = A[i];
+                    i--;
+                }
+                A[i + 1] = v;
+                n++;
+                System.out.println("Elemento insertado en la localidad " + (i+1));
+                }
         }
     }
 
