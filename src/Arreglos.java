@@ -94,6 +94,17 @@ public class Arreglos {
                 System.out.println("Elemento insertado en la localidad " + (i+1));
                 }
         }
+
+        public void mostrar() {
+            if (n == -1) {
+                System.out.println(" Arreglo vacio");
+            }
+            else {
+                for (int i = 0; i <= n; i++) {
+                    System.out.println(A[i]);
+                }
+            }
+        }
     }
 
 }
