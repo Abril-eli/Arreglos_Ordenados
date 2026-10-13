@@ -36,6 +36,7 @@ public static void main(String[] args) {
                 System.out.println("2. busca binaria");
                 System.out.println(" ingrese tipo de busqueda ");
                 int busqueda = sc.nextInt();
+                sc.nextLine();
                 switch (busqueda) {
                     case 1:
                         System.out.println(" ---busqueda lineal---");

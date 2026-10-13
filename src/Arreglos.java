@@ -17,13 +17,15 @@ public class Arreglos {
         }
 
         public int BuscarLineal(String v) {
+            int ciclos= 0;
             for (int i = 0; i <= n; i++) {
+                ciclos ++;
                 if (A[i].equalsIgnoreCase(v)) {
-                    System.out.println(" palabra encontrada en la localidad " + (i + 1));
+                    System.out.println(" palabra encontrada en la localidad " + (i + 1) + "en " + ciclos  + " ciclos");
                     return i;
                 }
                 if (A[i].compareToIgnoreCase(v) > 0) {
-                    System.out.println(" no existe la palabra en el arreglo ");
+                    System.out.println(" no existe la palabra en el arreglo " + "se buco por " + ciclos  + " ciclos");
                     return -1;
                 }
             }
@@ -34,12 +36,14 @@ public class Arreglos {
         public int BuscarBinario(String v) {
             int inicio = 0;
             int fin = n;
+            int ciclos = 0;
 
             while (inicio <= fin) {
+                ciclos ++;
                 int p = (inicio + fin) / 2;
 
                 if (A[p].equalsIgnoreCase(v)) {
-                    System.out.println(" palabra encontrada en la localidad " + (p + 1));
+                    System.out.println(" palabra encontrada en la localidad " + (p + 1) + "en " + ciclos  + " ciclos");
                     return p;
                 }
 
@@ -49,7 +53,7 @@ public class Arreglos {
                     fin = p - 1;
                 }
             }
-            System.out.println("No existe dicha palabra en el arreglo");
+            System.out.println("No existe dicha palabra en el arreglo, se buco por " + ciclos  + " ciclos" );
 
             return -1;
         }
@@ -66,7 +70,7 @@ public class Arreglos {
                 A[i] = A[i + 1];
             }
             n = n - 1;
-            System.out.println("Elemento eliminado de la localidad: " + R);
+            System.out.println("Elemento eliminado de la localidad: " + (R + 1));
             return R;
         }
 
@@ -107,7 +111,7 @@ public class Arreglos {
             }
             else {
                 for (int i = 0; i <= n; i++) {
-                    System.out.println(i +" "+ A[i]);
+                    System.out.println((i + 1) +" "+ A[i]);
                 }
             }
         }
