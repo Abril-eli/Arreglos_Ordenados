@@ -1,15 +1,16 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Arreglos {
     Scanner sc = new Scanner(System.in);
 
-    public class Arreglo {
+
 
         String[] A;
         int max;
         int n;
 
-        public Arreglo(int m) {
+        public Arreglos(int m) {
             max = m;
             A = new String[20];
             n = -1;
@@ -18,12 +19,15 @@ public class Arreglos {
         public int BuscarLineal(String v) {
             for (int i = 0; i <= n; i++) {
                 if (A[i].equalsIgnoreCase(v)) {
+                    System.out.println(" palabra encontrada en la localidad " + (i + 1));
                     return i;
                 }
                 if (A[i].compareToIgnoreCase(v) > 0) {
+                    System.out.println(" no existe la palabra en el arreglo ");
                     return -1;
                 }
             }
+            System.out.println(" no existe la palabra en el arreglo ");
             return -1;
         }
 
@@ -35,6 +39,7 @@ public class Arreglos {
                 int p = (inicio + fin) / 2;
 
                 if (A[p].equalsIgnoreCase(v)) {
+                    System.out.println(" palabra encontrada en la localidad " + (p + 1));
                     return p;
                 }
 
@@ -44,6 +49,7 @@ public class Arreglos {
                     fin = p - 1;
                 }
             }
+            System.out.println("No existe dicha palabra en el arreglo");
 
             return -1;
         }
@@ -60,7 +66,7 @@ public class Arreglos {
                 A[i] = A[i + 1];
             }
             n = n - 1;
-
+            System.out.println("Elemento eliminado de la localidad: " + R);
             return R;
         }
 
@@ -77,6 +83,33 @@ public class Arreglos {
             }
             return R;
         }
+
+        public void insertar (String v) {
+            if (n == max-1) {
+                System.out.println("Arreglo lleno");
+            }
+            else {
+                int i = n;
+                while (i >= 0 && v.compareToIgnoreCase(A[i]) < 0) {
+                    A[i + 1] = A[i];
+                    i--;
+                }
+                A[i + 1] = v;
+                n++;
+                System.out.println("Elemento insertado en la localidad " + (i+1));
+                }
+        }
+
+        public void mostrar() {
+            if (n == -1) {
+                System.out.println(" Arreglo vacio");
+            }
+            else {
+                for (int i = 0; i <= n; i++) {
+                    System.out.println(A[i]);
+                }
+            }
+        }
     }
 
-}
+
